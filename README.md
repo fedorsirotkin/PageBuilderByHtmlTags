@@ -7,8 +7,8 @@
 <p>Исходной точкой шаблона являются HTML-комментарии. Рассмотрим простейший пример:</p>
 
 <pre>
-<!-- begin-block-a-1 --> 
-<!-- end-block-a-1 --> 
+&lt;!-- begin-block-a-1 --&gt; 
+&lt;!-- end-block-a-1 --&gt; 
 </pre>
 
 <p>Здесь <b>begin</b> – начало смыслового блока, <b>end</b> – конец смыслового блока. Ключевое слово <b>block-a-1</b> это наименование метки, которая позволит общаться к содержимому внутри начальной и конечных меток (begin и end) в совокупности с ключевым словом.</p>
@@ -39,30 +39,30 @@ $pb->build();
 <p>Пример организации вложенных меток:</p>
 
 <pre>
-<!-- begin-block-a-1 --> 
+&lt;!-- begin-block-a-1 --&gt; 
 Content in block block-a-1 
-    <!-- begin-block-b-1 --> 
+    &lt;!-- begin-block-b-1 --&gt; 
     Content in block block-b-1 
-         <!-- begin-block-c-1 --> 
+         &lt;!-- begin-block-c-1 --&gt; 
          Content in block block-с-1 
-         <!-- end-block-c-1 --> 
-         <!-- begin-block-c-2 --> 
+         &lt;!-- end-block-c-1 --&gt; 
+         &lt;!-- begin-block-c-2 --&gt; 
          Content in block block-с-2 
-         <!-- end-block-c-2 --> 
-         <!-- begin-block-c-3 --> 
+         &lt;!-- end-block-c-2 --&gt; 
+         &lt;!-- begin-block-c-3 --&gt; 
          Content in block block-с-3 
-         <!-- end-block-c-3 --> 
-    <!-- end-block-b-1 --> 
-    <!-- begin-block-b-2 --> 
+         &lt;!-- end-block-c-3 --&gt; 
+    &lt;!-- end-block-b-1 --&gt; 
+    &lt;!-- begin-block-b-2 --&gt; 
     Content in block block-b-2 
-    <!-- end-block-b-2 --> 
-    <!-- begin-block-b-3 --> 
+    &lt;!-- end-block-b-2 --&gt; 
+    &lt;!-- begin-block-b-3 --&gt; 
     Content in block block-b-3 
-    <!-- end-block-b-3 --> 
-<!-- end-block-a-1 --> 
-<!-- begin-block-a-2 --> 
+    &lt;!-- end-block-b-3 --&gt; 
+&lt;!-- end-block-a-1 --&gt; 
+&lt;!-- begin-block-a-2 --&gt; 
 Content in block block-a-2 
-<!-- end-block-a-2 -->
+&lt;!-- end-block-a-2 --&gt;
 </pre>
 
 <p>Алгоритм шаблонизатора рекурсивно выполнит сборку шаблона на смысловые блоки, при необходимости, подставит данные в смысловые блоки, затем выполнит построение представления.</p>
