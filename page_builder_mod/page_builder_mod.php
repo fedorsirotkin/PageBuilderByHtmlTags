@@ -279,7 +279,10 @@ class PageBuilder {
      * 
      * @param string $page
      *   Верстка у которой надо заменить пути
-     * 
+     *
+     * @return string $page
+     *   Вёрстка с заменёнными путями
+     *
      */
     private function replace_paths($page) {
         $pattern = '~<(link|img).*(href|src)="(.*)?">~';
